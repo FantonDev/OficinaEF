@@ -1,0 +1,1531 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #5d0000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+
+/*Cores Principais do site*/
+
+:root {
+    --clair-purple: #5d0000;
+    --clair-purple-dark: #5d0000;
+    --clair-lavender: #5d0000;
+    --clair-blue: #5d0000;
+    --clair-white: #FFFFFF;
+    --clair-background: #F3F3FA;
+    --clair-text: #5d0000;
+    --clair-muted: #85839A;
+    --clair-border: #E6E4EF;
+}
+
+
+
+/*LOGIN*/
+.clair-login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    background: var(--clair-background);
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.clair-login-card {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 730px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    background: var(--clair-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(54, 39, 91, 0.10);
+}
+
+.clair-brand-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(85, 0, 0, 0.9),
+            rgba(85, 0, 0, 0.9),
+            rgba(85, 0, 0, 0.9)
+        ),
+        url('/images/login-banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: var(--clair-white);
+}
+
+.clair-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.clair-logo-symbol {
+    font-size: 34px;
+    color: var(--clair-blue);
+}
+
+.clair-brand-content {
+    max-width: 390px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.clair-brand-subtitle {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--clair-blue);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.clair-brand-content h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 43px;
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.clair-brand-content p {
+    max-width: 340px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.clair-brand-decoration {
+    margin-top: 30px;
+    color: var(--clair-blue);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.clair-brand-footer {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.clair-form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 45px;
+    background: var(--clair-white);
+}
+
+.clair-form-container {
+    width: 100%;
+    max-width: 390px;
+}
+
+.clair-mobile-logo {
+    display: none;
+    text-align: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--clair-purple);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.clair-mobile-logo span {
+    color: var(--clair-lavender);
+    font-size: 26px;
+}
+
+.clair-form-header {
+    margin-bottom: 38px;
+}
+
+.clair-form-label {
+    color: var(--clair-lavender);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.clair-form-header h1 {
+    margin: 12px 0;
+    color: var(--clair-text);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.clair-form-header p {
+    color: var(--clair-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.clair-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.clair-input-group label {
+    margin-bottom: 9px;
+    color: var(--clair-text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.clair-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border: 1px solid var(--clair-border);
+    border-radius: 9px;
+    outline: none;
+    background: #FCFCFE;
+    color: var(--clair-text);
+    font-family: inherit;
+    font-size: 13px;
+    transition: all 0.25s ease;
+}
+
+.clair-input::placeholder {
+    color: #B1AFBD;
+}
+
+.clair-input:focus {
+    border-color: var(--clair-lavender);
+    background: var(--clair-white);
+    box-shadow: 0 0 0 4px rgba(120, 137, 216, 0.13);
+}
+
+.clair-validation-message {
+    margin-top: 5px;
+    color: #D9534F;
+    font-size: 11px;
+}
+
+.clair-validation-summary {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #FFF1F1;
+    color: #C43D3D;
+    font-size: 12px;
+}
+
+.clair-validation-summary:empty {
+    display: none;
+}
+
+.clair-form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 28px;
+}
+
+.clair-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--clair-muted);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.clair-remember input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--clair-purple);
+    cursor: pointer;
+}
+
+.clair-link {
+    color: var(--clair-purple);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.clair-link:hover {
+    color: var(--clair-lavender);
+}
+
+.clair-login-button {
+    width: 100%;
+    height: 51px;
+    border: none;
+    border-radius: 9px;
+    background: var(--clair-purple);
+    color: var(--clair-white);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.clair-login-button:hover {
+    background: var(--clair-purple-dark);
+    box-shadow: 0 7px 18px rgba(73, 49, 127, 0.20);
+    transform: translateY(-2px);
+}
+
+.clair-login-button:active {
+    transform: translateY(0);
+}
+
+.clair-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 28px 0;
+    color: #AAA7B6;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.clair-divider::before,
+.clair-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--clair-border);
+}
+
+.clair-external-button {
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 10px;
+    border: 1px solid var(--clair-border);
+    border-radius: 9px;
+    background: var(--clair-white);
+    color: var(--clair-text);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clair-external-button:hover {
+    border-color: var(--clair-lavender);
+    background: var(--clair-background);
+}
+
+.clair-register {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.clair-register p {
+    margin-bottom: 8px;
+    color: var(--clair-muted);
+    font-size: 12px;
+}
+
+.clair-register-link {
+    color: var(--clair-purple);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.clair-register-link:hover {
+    color: var(--clair-lavender);
+}
+
+.clair-resend {
+    margin-top: 17px;
+    text-align: center;
+}
+
+.clair-resend a {
+    color: var(--clair-muted);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.clair-resend a:hover {
+    color: var(--clair-purple);
+}
+
+.clair-form-footer {
+    margin-top: 35px;
+    text-align: center;
+    color: #B1AFBD;
+    font-size: 10px;
+}
+
+.clair-form-footer span {
+    color: var(--clair-lavender);
+}
+
+@media (max-width: 850px) {
+
+    .clair-login-container {
+        padding: 20px;
+    }
+
+    .clair-login-card {
+        max-width: 520px;
+        grid-template-columns: 1fr;
+    }
+
+    .clair-brand-panel {
+        min-height: 280px;
+        padding: 30px;
+    }
+
+    .clair-brand-content h2 {
+        font-size: 32px;
+    }
+
+    .clair-brand-content p {
+        font-size: 12px;
+    }
+
+    .clair-brand-decoration {
+        margin-top: 15px;
+    }
+
+    .clair-brand-footer {
+        margin-top: 20px;
+    }
+
+    .clair-form-panel {
+        padding: 45px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .clair-login-container {
+        padding: 12px;
+    }
+
+    .clair-login-card {
+        border-radius: 14px;
+    }
+
+    .clair-brand-panel {
+        min-height: 240px;
+        padding: 25px;
+    }
+
+    .clair-brand-logo {
+        font-size: 17px;
+    }
+
+    .clair-brand-content h2 {
+        font-size: 28px;
+    }
+
+    .clair-brand-content p {
+        font-size: 11px;
+    }
+
+    .clair-form-panel {
+        padding: 35px 22px;
+    }
+
+    .clair-mobile-logo {
+        display: block;
+    }
+
+    .clair-form-header h1 {
+        font-size: 29px;
+    }
+
+    .clair-form-options {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+/*CADASTRO*/
+
+.clair-signup-card {
+    min-height: 780px;
+}
+
+
+.clair-signup-form-panel {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.clair-signup-form-container {
+    max-width: 390px;
+}
+
+
+.clair-signup-form-container .clair-form-header {
+    margin-bottom: 28px;
+}
+
+
+.clair-signup-form-container .clair-input-group {
+    margin-bottom: 19px;
+}
+
+
+.clair-signup-form-container .clair-login-button {
+    margin-top: 8px;
+}
+
+
+.clair-signup-login {
+    margin-top: 27px;
+    text-align: center;
+}
+
+.clair-signup-login p {
+    margin-bottom: 7px;
+    color: var(--clair-muted);
+    font-size: 12px;
+}
+
+.clair-signup-login .clair-register-link {
+    color: var(--clair-purple);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.clair-signup-login .clair-register-link:hover {
+    color: var(--clair-lavender);
+}
+
+.clair-signup-terms {
+    max-width: 310px;
+    margin: 22px auto 0;
+    color: #AAA7B6;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Rodapé */
+
+.clair-signup-form-container .clair-form-footer {
+    margin-top: 25px;
+}
+
+@media (max-width: 850px) {
+
+    .clair-signup-card {
+        max-width: 520px;
+        min-height: auto;
+    }
+
+    .clair-signup-form-panel {
+        padding: 40px 30px;
+    }
+
+    .clair-signup-form-container {
+        max-width: 420px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .clair-signup-form-panel {
+        padding: 35px 22px;
+    }
+
+    .clair-signup-form-container .clair-form-header h1 {
+        font-size: 29px;
+    }
+
+    .clair-signup-terms {
+        font-size: 9px;
+    }
+
+}
+
+
+
+/* ===== CLAIR DE LUNE | PÁGINAS INSTITUCIONAIS ===== */
+
+:root {
+    --clair-ink: #292536;
+    --clair-plum: #38245F;
+    --clair-purple: #49317F;
+    --clair-lavender: #7889D8;
+    --clair-blue: #B9C8F0;
+    --clair-paper: #F8F7FB;
+    --clair-line: #E6E4EF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.clair-site {
+    margin: 0;
+    background: #fff;
+    color: var(--clair-ink);
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+.clair-site main {
+    min-height: 55vh;
+}
+
+.clair-header {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid rgba(73,49,127,.09);
+}
+
+.clair-navbar {
+    min-height: 88px;
+    padding: 12px 0;
+}
+
+.clair-nav-container {
+    max-width: 1240px;
+}
+
+.clair-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--clair-plum) !important;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.clair-nav-brand:hover {
+    color: var(--clair-purple) !important;
+}
+
+.clair-nav-brand small {
+    display: block;
+    margin-top: 6px;
+    color: var(--clair-lavender);
+    font: 600 8px 'DM Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+.clair-nav-moon {
+    color: var(--clair-lavender);
+    font-size: 35px;
+    line-height: 1;
+}
+
+.clair-nav-links {
+    gap: 27px;
+}
+
+.clair-nav-links .nav-link {
+    color: #696579;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    transition: color .2s;
+}
+
+.clair-nav-links .nav-link:hover,
+.clair-nav-links .nav-link:focus {
+    color: var(--clair-lavender);
+}
+
+.clair-toggler {
+    border-color: var(--clair-line);
+}
+
+.clair-site #login,
+.clair-site #register,
+.clair-site .navbar .btn,
+.clair-site .navbar a.btn {
+    border-radius: 30px;
+}
+
+.clair-site .navbar-collapse {
+    align-items: center;
+}
+
+
+/* ===== RODAPÉ ===== */
+
+.clair-footer {
+    background: #29213D;
+    color: #fff;
+}
+
+.clair-footer-main {
+    display: grid;
+    grid-template-columns: 1.4fr .8fr 1fr;
+    gap: 50px;
+    padding-top: 62px;
+    padding-bottom: 55px;
+}
+
+.clair-footer-logo {
+    font: 600 19px 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+.clair-footer-logo span {
+    color: var(--clair-blue);
+    font-size: 27px;
+    margin-right: 8px;
+}
+
+.clair-footer-brand p,
+.clair-footer-note p {
+    margin-top: 17px;
+    color: rgba(255,255,255,.62);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.clair-footer-heading {
+    display: block;
+    margin-bottom: 19px;
+    color: var(--clair-blue);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.clair-footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.clair-footer-links a {
+    color: rgba(255,255,255,.75);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.clair-footer-links a:hover {
+    color: #fff;
+}
+
+.clair-footer-star {
+    color: var(--clair-blue);
+    font-size: 10px;
+    letter-spacing: .4px;
+}
+
+.clair-footer-bottom {
+    padding: 18px 0;
+    border-top: 1px solid rgba(255,255,255,.12);
+    color: rgba(255,255,255,.48);
+    font-size: 10px;
+    letter-spacing: .4px;
+}
+
+
+/* ===== PÁGINA INICIAL ===== */
+
+.clair-home-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+    color: #fff;
+    background: linear-gradient(
+        112deg,
+        #302047 0%,
+        #49317F 55%,
+        #6879BD 100%
+    );
+}
+
+.clair-hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 50px;
+    min-height: 570px;
+    padding-top: 65px;
+    padding-bottom: 60px;
+}
+
+.clair-hero-copy {
+    max-width: 570px;
+    padding: 15px 0 25px;
+}
+
+.clair-eyebrow,
+.clair-section-kicker {
+    color: var(--clair-lavender);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.clair-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #D5DDFB;
+}
+
+.clair-eyebrow span {
+    width: 25px;
+    height: 1px;
+    background: #D5DDFB;
+}
+
+.clair-hero-copy h1 {
+    margin: 27px 0 22px;
+    font: 500 clamp(43px,5.3vw,69px)/1.12
+        'Playfair Display', Georgia, serif;
+    letter-spacing: -1.5px;
+}
+
+.clair-hero-copy h1 em,
+.clair-intro-inner h2 em,
+.clair-section-heading h2 em,
+.clair-quote-section em,
+.clair-privacy-hero h1 em {
+    color: #C9D3F8;
+    font-weight: 400;
+}
+
+.clair-hero-copy p {
+    max-width: 475px;
+    color: rgba(255,255,255,.76);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.clair-primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 22px;
+    padding: 17px 21px;
+    border: 1px solid rgba(255,255,255,.55);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: all .25s;
+}
+
+.clair-primary-button span {
+    font-size: 17px;
+}
+
+.clair-primary-button:hover {
+    background: #fff;
+    color: var(--clair-plum);
+}
+
+.clair-hero-caption {
+    margin-top: 47px;
+    color: #D5DDFB;
+    font-size: 10px;
+    letter-spacing: .7px;
+}
+
+.clair-hero-caption span {
+    margin-right: 9px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.clair-hero-art {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+}
+
+.clair-art-halo {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(255,255,255,.035),
+        0 0 0 70px rgba(255,255,255,.025);
+}
+
+.clair-art-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(320px,78%);
+    height: 390px;
+    border: 1px solid rgba(255,255,255,.48);
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.19),
+        rgba(255,255,255,.035)
+    );
+    box-shadow: 0 25px 80px rgba(22,13,44,.2);
+    transform: rotate(3deg);
+}
+
+.clair-art-moon {
+    color: #D9E0FF;
+    font-size: 78px;
+    line-height: 1;
+}
+
+.clair-art-word {
+    margin-top: 10px;
+    font: 500 39px 'Playfair Display', serif;
+    letter-spacing: 7px;
+}
+
+.clair-art-small {
+    margin-top: 9px;
+    color: #D5DDFB;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+.clair-art-tag {
+    position: absolute;
+    right: 2%;
+    bottom: 25px;
+    padding: 12px 17px;
+    background: #F3F1FA;
+    color: var(--clair-plum);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: rotate(-4deg);
+}
+
+.clair-art-tag span {
+    margin-left: 12px;
+    color: var(--clair-lavender);
+}
+
+.clair-art-side-note {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    color: rgba(255,255,255,.55);
+    font-size: 7px;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+}
+
+.clair-hero-orbit {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+}
+
+.clair-orbit-one {
+    width: 650px;
+    height: 650px;
+    top: -380px;
+    right: -160px;
+}
+
+.clair-orbit-two {
+    width: 900px;
+    height: 900px;
+    bottom: -720px;
+    left: -400px;
+}
+
+.clair-hero-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-bottom: 19px;
+    border-top: 1px solid rgba(255,255,255,.18);
+    color: rgba(255,255,255,.55);
+    font-size: 8px;
+    letter-spacing: 1.6px;
+}
+
+
+/* ===== INTRODUÇÃO ===== */
+
+.clair-intro-section {
+    padding: 105px 0 100px;
+    background: #fff;
+    text-align: center;
+}
+
+.clair-intro-inner {
+    position: relative;
+    max-width: 700px;
+}
+
+.clair-intro-inner h2,
+.clair-section-heading h2 {
+    margin: 19px 0;
+    color: var(--clair-ink);
+    font: 500 43px/1.2 'Playfair Display', Georgia, serif;
+}
+
+.clair-intro-inner h2 em,
+.clair-section-heading h2 em {
+    color: var(--clair-lavender);
+}
+
+.clair-intro-inner p {
+    max-width: 590px;
+    margin: 0 auto;
+    color: #85839A;
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+.clair-intro-flourish {
+    display: block;
+    margin-top: 25px;
+    color: var(--clair-lavender);
+    font-size: 25px;
+}
+
+
+/* ===== COLEÇÕES ===== */
+
+.clair-collection-section {
+    padding: 82px 0 92px;
+    background: var(--clair-paper);
+}
+
+.clair-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.clair-section-heading h2 {
+    margin-bottom: 0;
+    font-size: 38px;
+}
+
+.clair-heading-number {
+    padding-bottom: 8px;
+    color: #A09DAF;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.clair-collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.clair-collection-card {
+    min-width: 0;
+}
+
+.clair-collection-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.clair-card-one .clair-collection-visual {
+    background: linear-gradient(145deg,#E7E3F0,#C7C0DD);
+}
+
+.clair-card-two .clair-collection-visual {
+    background: linear-gradient(145deg,#D9DFF2,#A9B6DF);
+}
+
+.clair-card-three .clair-collection-visual {
+    background: linear-gradient(145deg,#E8E0EA,#C7AFCB);
+}
+
+.clair-visual-mark {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: rgba(48,32,71,.55);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.clair-visual-symbol {
+    color: rgba(73,49,127,.72);
+    font-size: 75px;
+}
+
+.clair-visual-word {
+    position: absolute;
+    bottom: 20px;
+    color: rgba(48,32,71,.62);
+    font: 500 10px 'Playfair Display', serif;
+    letter-spacing: 4px;
+}
+
+.clair-collection-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 2px;
+}
+
+.clair-collection-info span:first-child {
+    color: #9995A8;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.clair-collection-info h3 {
+    margin: 5px 0 0;
+    color: var(--clair-ink);
+    font: 500 22px 'Playfair Display', serif;
+}
+
+.clair-card-arrow {
+    color: var(--clair-purple);
+    font-size: 20px;
+}
+
+.clair-collection-disclaimer {
+    margin: 18px 0 0;
+    color: #A09DAF;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+/* ===== FRASE FINAL ===== */
+
+.clair-quote-section {
+    padding: 78px 0;
+    background: #34264D;
+    color: #fff;
+    text-align: center;
+}
+
+.clair-quote-section .container > span {
+    color: var(--clair-blue);
+    font: 70px 'Playfair Display', serif;
+    line-height: .8;
+}
+
+.clair-quote-section p {
+    margin: 10px 0 20px;
+    font: 29px/1.5 'Playfair Display', serif;
+}
+
+.clair-quote-section small {
+    color: #B9C8F0;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+
+/* ===== POLÍTICA DE PRIVACIDADE ===== */
+
+.clair-privacy-hero {
+    padding: 76px 0 60px;
+    background: linear-gradient(115deg,#F4F2FA,#E9EAF7);
+}
+
+.clair-privacy-hero .container {
+    max-width: 1050px;
+}
+
+.clair-privacy-hero h1 {
+    margin: 17px 0 13px;
+    color: var(--clair-ink);
+    font: 500 clamp(38px,5vw,57px)/1.15
+        'Playfair Display', serif;
+}
+
+.clair-privacy-hero h1 em {
+    color: var(--clair-lavender);
+}
+
+.clair-privacy-hero p {
+    color: #777487;
+    font-size: 13px;
+}
+
+.clair-privacy-meta {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 30px;
+    color: #8E8A9E;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.clair-privacy-meta span:nth-child(2) {
+    color: var(--clair-lavender);
+}
+
+.clair-privacy-content {
+    padding: 65px 0 100px;
+}
+
+.clair-privacy-layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0,760px);
+    justify-content: space-between;
+    gap: 65px;
+    max-width: 1050px;
+}
+
+.clair-privacy-aside {
+    position: sticky;
+    top: 25px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 22px 0 22px 20px;
+    border-left: 1px solid var(--clair-line);
+}
+
+.clair-privacy-aside span {
+    margin-bottom: 7px;
+    color: var(--clair-lavender);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.clair-privacy-aside a {
+    color: #777487;
+    font-size: 10px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.clair-privacy-aside a:hover {
+    color: var(--clair-purple);
+}
+
+.clair-privacy-welcome {
+    margin-bottom: 38px;
+    padding: 25px 28px;
+    border-left: 3px solid var(--clair-lavender);
+    background: #F8F7FB;
+}
+
+.clair-privacy-welcome span {
+    color: var(--clair-lavender);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.clair-privacy-welcome p {
+    margin: 12px 0 0;
+    color: #6F6B80;
+    font: 16px/1.9 'Playfair Display', serif;
+}
+
+.clair-policy-section {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 16px;
+    padding: 27px 0;
+    border-bottom: 1px solid var(--clair-line);
+    scroll-margin-top: 25px;
+}
+
+.clair-policy-number {
+    color: #A4A0B4;
+    font: italic 17px 'Playfair Display', serif;
+}
+
+.clair-policy-section h2 {
+    margin: 0 0 11px;
+    color: var(--clair-ink);
+    font: 500 22px 'Playfair Display', serif;
+}
+
+.clair-policy-section p {
+    margin: 0;
+    color: #777487;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.clair-privacy-note {
+    display: flex;
+    gap: 14px;
+    margin-top: 35px;
+    padding: 20px;
+    background: #F2F1F8;
+}
+
+.clair-privacy-note span {
+    color: var(--clair-lavender);
+}
+
+.clair-privacy-note p {
+    margin: 0;
+    color: #777487;
+    font-size: 10px;
+    line-height: 1.9;
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 991px) {
+
+    .clair-nav-links {
+        gap: 8px;
+        padding: 15px 0;
+    }
+
+    .clair-hero-content {
+        gap: 20px;
+    }
+
+    .clair-hero-copy h1 {
+        font-size: 53px;
+    }
+
+    .clair-art-side-note {
+        right: 0;
+    }
+
+    .clair-privacy-layout {
+        grid-template-columns: 190px minmax(0,1fr);
+        gap: 35px;
+    }
+
+}
+
+
+
+/*INDEX E PRIVACY*/
+@media (max-width: 767px) {
+
+    .clair-navbar {
+        min-height: 72px;
+    }
+
+    .clair-hero-content {
+        grid-template-columns: 1fr;
+        padding-top: 65px;
+        padding-bottom: 30px;
+    }
+
+    .clair-hero-copy {
+        text-align: center;
+        margin: auto;
+    }
+
+    .clair-eyebrow {
+        justify-content: center;
+    }
+
+    .clair-hero-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .clair-hero-caption {
+        margin-top: 28px;
+    }
+
+    .clair-hero-art {
+        min-height: 360px;
+    }
+
+    .clair-art-panel {
+        height: 310px;
+    }
+
+    .clair-art-halo {
+        width: 280px;
+        height: 280px;
+    }
+
+    .clair-art-side-note {
+        right: 5px;
+    }
+
+    .clair-hero-bottom span:nth-child(2) {
+        display: none;
+    }
+
+    .clair-intro-section {
+        padding: 75px 15px;
+    }
+
+    .clair-intro-inner h2 {
+        font-size: 36px;
+    }
+
+    .clair-collection-section {
+        padding: 65px 0;
+    }
+
+    .clair-section-heading {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .clair-section-heading h2 {
+        font-size: 34px;
+    }
+
+    .clair-collection-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .clair-collection-visual {
+        height: 260px;
+    }
+
+    .clair-footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .clair-footer-note {
+        grid-column: 1/-1;
+    }
+
+    .clair-privacy-hero {
+        padding: 55px 0 42px;
+    }
+
+    .clair-privacy-content {
+        padding: 40px 0 65px;
+    }
+
+    .clair-privacy-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .clair-privacy-aside {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .clair-privacy-aside span {
+        grid-column: 1/-1;
+    }
+
+    .clair-privacy-welcome {
+        padding: 20px;
+    }
+
+    .clair-policy-section {
+        grid-template-columns: 28px 1fr;
+        gap: 10px;
+    }
+
+    .clair-policy-section h2 {
+        font-size: 20px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .clair-hero-copy h1 {
+        font-size: 42px;
+    }
+
+    .clair-primary-button {
+        gap: 12px;
+        padding: 15px;
+        font-size: 8px;
+    }
+
+    .clair-hero-bottom {
+        font-size: 7px;
+    }
+
+    .clair-footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .clair-footer-note {
+        grid-column: auto;
+    }
+
+    .clair-privacy-aside {
+        grid-template-columns: 1fr;
+    }
+
+}

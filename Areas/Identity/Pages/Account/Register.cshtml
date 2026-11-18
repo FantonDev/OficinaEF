@@ -1,0 +1,156 @@
+﻿@page
+@model RegisterModel
+
+@{
+    ViewData["Title"] = "Criar conta";
+}
+
+<div class="clair-login-container">
+    <div class="clair-login-card clair-signup-card">
+
+        <div class="clair-brand-panel">
+            <div class="clair-brand-logo">
+                <span class="clair-logo-symbol">☾</span>
+                <span>CLAIR DE LUNE</span>
+            </div>
+
+            <div class="clair-brand-content">
+                <span class="clair-brand-subtitle">FASHION &amp; STYLE</span>
+
+                <h2>
+                    Seu estilo.<br />
+                    Sua história.
+                </h2>
+
+                <p>
+                    Faça parte do universo Clair de Lune e descubra
+                    peças que combinam com sua personalidade.
+                    A moda começa com você.
+                </p>
+
+                <div class="clair-brand-decoration">
+                    ✦ &nbsp; Encontre seu próprio brilho
+                </div>
+            </div>
+
+            <div class="clair-brand-footer">
+                © @DateTime.Now.Year Clair de Lune. Todos os direitos reservados.
+            </div>
+        </div>
+
+        <div class="clair-form-panel clair-signup-form-panel">
+            <div class="clair-form-container clair-signup-form-container">
+
+                <div class="clair-mobile-logo">
+                    <span>☾</span> CLAIR DE LUNE
+                </div>
+
+                <div class="clair-form-header">
+                    <span class="clair-form-label">FAÇA PARTE DA NOSSA HISTÓRIA</span>
+                    <h1>Crie sua conta!</h1>
+                    <p>
+                        Preencha seus dados e venha fazer parte
+                        do universo Clair de Lune.
+                    </p>
+                </div>
+
+                <form id="registerForm"
+                      asp-page="./Register"
+                      asp-route-returnUrl="@Model.ReturnUrl"
+                      method="post">
+
+                    <div asp-validation-summary="ModelOnly"
+                         class="clair-validation-summary"
+                         role="alert"></div>
+
+                    <div class="clair-input-group">
+                        <label asp-for="Input.Email">E-mail</label>
+                        <input asp-for="Input.Email"
+                               type="email"
+                               class="clair-input"
+                               autocomplete="username"
+                               placeholder="seuemail@exemplo.com"
+                               required />
+                        <span asp-validation-for="Input.Email"
+                              class="clair-validation-message"></span>
+                    </div>
+
+                    <div class="clair-input-group">
+                        <label asp-for="Input.Password">Senha</label>
+                        <input asp-for="Input.Password"
+                               type="password"
+                               class="clair-input"
+                               autocomplete="new-password"
+                               placeholder="Crie uma senha"
+                               required />
+                        <span asp-validation-for="Input.Password"
+                              class="clair-validation-message"></span>
+                    </div>
+
+                    <div class="clair-input-group">
+                        <label asp-for="Input.ConfirmPassword">Confirmar senha</label>
+                        <input asp-for="Input.ConfirmPassword"
+                               type="password"
+                               class="clair-input"
+                               autocomplete="new-password"
+                               placeholder="Digite sua senha novamente"
+                               required />
+                        <span asp-validation-for="Input.ConfirmPassword"
+                              class="clair-validation-message"></span>
+                    </div>
+
+                    <button id="registerSubmit"
+                            type="submit"
+                            class="clair-login-button">
+                        Criar minha conta
+                    </button>
+                </form>
+
+                @if (Model.ExternalLogins is { Count: > 0 } externalLogins)
+                {
+                    <div class="clair-divider">
+                        <span>OU</span>
+                    </div>
+
+                    <form id="external-account"
+                          asp-page="./ExternalLogin"
+                          asp-route-returnUrl="@Model.ReturnUrl"
+                          method="post">
+                        @foreach (var provider in externalLogins)
+                        {
+                            <button type="submit"
+                                    class="clair-external-button"
+                                    name="provider"
+                                    value="@provider.Name">
+                                Cadastrar com @provider.DisplayName
+                            </button>
+                        }
+                    </form>
+                }
+
+                <div class="clair-signup-login">
+                    <p>Já possui uma conta?</p>
+                    <a asp-page="./Login"
+                       asp-route-returnUrl="@Model.ReturnUrl"
+                       class="clair-register-link">
+                        Fazer login
+                    </a>
+                </div>
+
+                <div class="clair-signup-terms">
+                    Ao criar sua conta, você poderá aproveitar
+                    todas as novidades da Clair de Lune.
+                </div>
+
+                <div class="clair-form-footer">
+                    Feito com carinho para você. <span>✦</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
