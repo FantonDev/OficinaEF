@@ -1216,3 +1216,4 @@ C:\Users\50454088876\Downloads\OficinaEF\OficinaEF\obj\Debug\net10.0\compressed\
 C:\Users\50454088876\Downloads\OficinaEF\OficinaEF\obj\Debug\net10.0\compressed\gjjun503h1-{0}-ctnlom6whf-ctnlom6whf.gz
 C:\Users\50454088876\Downloads\OficinaEF\OficinaEF\bin\Debug\net10.0\dotnet-tools.json
 C:\Users\50454088876\Downloads\OficinaEF\OficinaEF\obj\Debug\net10.0\compressed\krby2xlm0f-{0}-va3fwdia52-va3fwdia52.gz
+C:\Users\50454088876\Downloads\OficinaEF\OficinaEF\obj\Debug\net10.0\OficinaEF.sourcelink.json
